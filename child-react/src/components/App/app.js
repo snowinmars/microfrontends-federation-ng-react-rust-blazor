@@ -1,5 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import {Clicker} from "../Clicker/Clicker";
 
 const reactVersion = require('../../../package.json').dependencies['react'];
@@ -13,14 +19,26 @@ const App = () => {
     <p>
       React Version: {reactVersion}
     </p>
-    <Clicker/>
+
+    <div>
+      <Link to="/childReact/a">a</Link> |
+      <Link to="/childReact/b">b</Link> |
+      <Link to="/childReact/clicker">Clicker</Link>
+    </div>
+
+    <Routes>
+      <Route path="/childReact/a" element={'a'} />
+      <Route path="/childReact/b" element={'b'} />
+      <Route path="/childReact/clicker" element={<Clicker />} />
+    </Routes>
+
   </div>
 };
 
 class ChildReactElement extends HTMLElement {
   connectedCallback() {
     console.log('ChildReactElement connected')
-    ReactDOM.render(<App/>, this);
+    ReactDOM.render(<BrowserRouter><App/></BrowserRouter>, this);
   }
 }
 
