@@ -5,6 +5,7 @@ import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
+import {ClickerComponent} from "./Clicker/clicker.component";
 import { RouterModule } from '@angular/router';
 import { endsWith } from './router.utils';
 
@@ -14,11 +15,13 @@ import { endsWith } from './router.utils';
     RouterModule.forRoot([
       { matcher: endsWith('a'), component: AComponent},
       { matcher: endsWith('b'), component: BComponent},
+      { matcher: endsWith('clicker'), component: ClickerComponent},
     ])
   ],
   declarations: [
     AComponent,
     BComponent,
+    ClickerComponent,
     AppComponent
   ],
   providers: [],

@@ -30,7 +30,7 @@ module.exports = (options) => {
         name: "childReact",
         filename: "remoteEntry.js",
         exposes: {
-          "./web-components": "./app.js",
+          "./web-components": "./src/components/App/app.js",
         },
         shared: ["react", "react-dom"],
       }),
