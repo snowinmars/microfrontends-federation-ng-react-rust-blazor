@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {bus, clickerEvent} from 'childBus/web-components/bus';
+import {bus, setClickerCount, onClickerCountChanged} from 'childBus/web-components/bus';
 
 declare const require: any;
 
@@ -13,12 +13,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
   title = 'host';
 
+  private count = 0;
 
   ngOnInit(): void {
-    bus.subscribe(clickerEvent, event => {
-      console.log(event.payload.count);
+    bus.subscribe(setClickerCount, event => {
+      this.count = event.payload.count;
+      bus.publish(onClickerCountChanged({count: this.count}))
+      console.log('host proxy', event.payload.count);
     });
-
   }
 
   ngOnDestroy(): void {

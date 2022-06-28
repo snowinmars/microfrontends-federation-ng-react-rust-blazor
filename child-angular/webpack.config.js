@@ -13,10 +13,12 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "childAngular",
       filename: "remoteEntry.js",
+      remotes: {
+        childBus: "childBus@http://localhost:4204/remoteEntry.js",
+      },
       exposes: {
         "./web-components": "./src/bootstrap.ts",
       },
-
       shared: ["@angular/core", "@angular/common", "@angular/router"],
     }),
   ],
