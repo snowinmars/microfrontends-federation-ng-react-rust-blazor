@@ -5,6 +5,7 @@
     "host",
     "child-react",
     "child-angular",
-    "child-wasm"
+    "child-wasm",
+    "child-bus"
   ]
 }

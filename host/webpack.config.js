@@ -11,6 +11,7 @@ module.exports = {
         childAngular: "childAngular@http://localhost:4201/remoteEntry.js",
         childReact: "childReact@http://localhost:4202/remoteEntry.js",
         childWasm: "childWasm@http://localhost:4203/remoteEntry.js",
+        childBus: "childBus@http://localhost:4204/remoteEntry.js",
       },
       shared: ["@angular/core", "@angular/common", "@angular/router"],
     }),

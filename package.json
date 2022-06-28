@@ -18,6 +18,6 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --stream"
+    "start": "lerna run start --stream --concurrency 5"
   }
 }
