@@ -46,7 +46,7 @@ module.exports = {
       name: 'childWasm',
       filename: 'remoteEntry.js',
       exposes: {
-        './GameOfLifeModule': './pkg/',
+        './web-components': './pkg/',
       },
     }),
   ],
