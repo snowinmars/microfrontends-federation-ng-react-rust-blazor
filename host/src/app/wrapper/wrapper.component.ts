@@ -16,7 +16,6 @@ export class WrapperComponent implements AfterContentInit {
 
     const elementName = this.route.snapshot.data['elementName'];
     const importName = this.route.snapshot.data['importName'];
-
     const importFn = registry[importName];
     importFn()
       .then(_ => console.debug(`element ${elementName} loaded!`))

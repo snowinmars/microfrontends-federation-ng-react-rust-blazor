@@ -20,6 +20,7 @@ class App extends React.Component {
 
 class ChildReactElement extends HTMLElement {
   connectedCallback() {
+      console.log('ChildReactElement connected')
     ReactDOM.render(<App/>, this);
   }
 }

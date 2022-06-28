@@ -2,7 +2,8 @@ import('../pkg/index.js')
   .then(({ Universe }) => {
     console.log(`loaded Wasm module`);
 
-    const pre = document.getElementById('game-of-life-canvas');
+    const pre = document.getElementsByTagName('child-wasm-element')[0];
+
     const universe = Universe.new();
 
     const renderLoop = () => {

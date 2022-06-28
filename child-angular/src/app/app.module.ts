@@ -29,6 +29,7 @@ export class AppModule {
   }
 
   ngDoBootstrap() {
+    console.log('childAngularElement')
     const ce = createCustomElement(AppComponent, {injector: this.injector});
     customElements.define('child-angular-element', ce);
   }
