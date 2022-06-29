@@ -17,8 +17,8 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --stream --concurrency 5",
-    "build": "lerna run build"
+    "bootstrap": "lerna bootstrap --concurrency 6",
+    "start": "lerna run start --stream --concurrency 6",
+    "build": "lerna run build --concurrency 6"
   }
 }

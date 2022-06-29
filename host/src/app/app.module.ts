@@ -13,6 +13,7 @@ import { WrapperComponent } from './wrapper/wrapper.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { matcher: startsWith('childAngular'), component: WrapperComponent, data: { importName: 'childAngular', elementName: 'child-angular-element' }},
+      { matcher: startsWith('childBlazor'), component: WrapperComponent, data: { importName: 'childBlazor', elementName: 'child-blazor-element' }},
       { matcher: startsWith('childReact'), component: WrapperComponent, data: { importName: 'childReact', elementName: 'child-react-element' }},
       { matcher: startsWith('childWasm'), component: WrapperComponent, data: { importName: 'childWasm', elementName: 'child-wasm-element' }},
     ])

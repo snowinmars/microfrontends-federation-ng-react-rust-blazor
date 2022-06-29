@@ -6,6 +6,7 @@
     "child-react",
     "child-angular",
     "child-wasm",
-    "child-bus"
+    "child-bus",
+    "BlazorApp1/bin/Release/net6.0/browser-wasm/publish"
   ]
 }
